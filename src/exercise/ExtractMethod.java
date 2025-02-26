@@ -42,7 +42,6 @@ public class ExtractMethod {
         return outstanding;
     }
 
-    // print details
     private void printDetails(double outstanding) {
         System.out.println("name: " + name);
         System.out.println("amount: " + outstanding);
