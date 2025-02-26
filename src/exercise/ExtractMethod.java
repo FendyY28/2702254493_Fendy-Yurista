@@ -20,21 +20,18 @@ public class ExtractMethod {
         orders = new Order();
     }
 
-    // method yang direfactor
     void printOwing() {
         printBanner();
         double outstanding = calculateOutstanding();
         printDetails(outstanding);
     }
 
-    // print banner
     private void printBanner() {
         System.out.println("*****************************");
         System.out.println("****** Customer totals ******");
         System.out.println("*****************************");
     }
 
-    // calculate the outstanding amount
     private double calculateOutstanding() {
         double outstanding = 0.0;
         Enumeration elements = orders.elements();
