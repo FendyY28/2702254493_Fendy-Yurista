@@ -16,22 +16,18 @@ public class DecomposeConditional {
             this.winterServiceCharge = service;
         }
 
-        // check if the date is in summer or not
         private boolean isSummer(Date date) {
             return !(date.before(SUMMER_START) || date.after(SUMMER_END));
         }
 
-        // winter price
         private double winterCharge(int quantity) {
             return quantity * winterRate + winterServiceCharge;
         }
 
-        // calculate summer price
         private double summerCharge(int quantity) {
             return quantity * summerRate;
         }
 
-        // extracted method
         public double getTicketPrice(Date date, int quantity) {
             return isSummer(date) ? summerCharge(quantity) : winterCharge(quantity);
         }
